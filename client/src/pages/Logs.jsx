@@ -118,8 +118,8 @@ const Logs = () => {
             ) : filteredUploads.length === 0 ? (
                 <div className="logs-empty-state">
                     <FileArchive size={64} className="empty-icon" />
-                    <h3 className="text-2xl font-bold text-slate-300 mb-2">No files found</h3>
-                    <p className="text-slate-500">Try searching for something else or upload a new file.</p>
+                    <h3 className="text-2xl font-bold text-[#2d3748] mb-2">No files found</h3>
+                    <p className="text-[#4a5568] font-semibold">Try searching for something else or upload a new file.</p>
                 </div>
             ) : (
                 <div className="logs-grid">

@@ -6,28 +6,15 @@
 
 :root {
   font-family: 'Outfit', sans-serif;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-dark-bg text-slate-200 min-h-screen overflow-x-hidden;
-  background-image: 
-    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
-    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
-}
-
-/* Base Glass Utility */
-.glass {
-  @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl;
-}
-
-.glass-hover {
-  @apply transition-all duration-300 hover:bg-opacity-80 hover:border-slate-500/50 hover:shadow-2xl;
+  @apply bg-[#e0e5ec] text-[#4a5568] min-h-screen overflow-x-hidden;
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600;
 }
 
 ::-webkit-scrollbar {
@@ -35,17 +22,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-bg;
+  @apply bg-[#e0e5ec];
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-700 rounded-full hover:bg-slate-600;
+  @apply bg-[#a0aec0] rounded-full;
+  box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.7), inset -4px -4px 8px rgba(255, 255, 255, 0.8);
 }
 
 .zipvault-toast {
-  background: #1e293b !important;
-  color: #fff !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(10px) !important;
-  border-radius: 12px !important;
+  @apply bg-[#e0e5ec] text-[#4a5568] rounded-xl border-none;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
 }

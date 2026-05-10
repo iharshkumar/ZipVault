@@ -1,119 +1,111 @@
 .home-container {
-    @apply pt-28 pb-12 px-6 max-w-7xl mx-auto;
+    @apply pt-28 pb-12 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto min-h-screen flex flex-col justify-center;
 }
 
 .home-grid {
-    @apply grid lg:grid-cols-2 gap-12 items-start;
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center;
 }
 
 .hero-section {
-    @apply space-y-8;
+    @apply space-y-6 md:space-y-8 text-center lg:text-left;
 }
 
 .hero-title {
-    @apply text-5xl font-bold mb-4;
-}
-
-.gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight;
 }
 
 .hero-subtitle {
-    @apply text-slate-400 text-lg leading-relaxed;
+    @apply text-[#4a5568] text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0;
 }
 
 .upload-card {
-    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-8 rounded-[2rem] relative overflow-hidden;
+    @apply bg-[#e0e5ec] rounded-[1.5rem] shadow-[9px_9px_16px_rgba(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] p-6 sm:p-8 relative overflow-hidden mt-8 lg:mt-0;
 }
 
 .dropzone {
-    @apply border-2 border-dashed rounded-2xl p-12 transition-all cursor-pointer flex flex-col items-center justify-center gap-4;
+    @apply border-2 border-dashed border-[#a0aec0] rounded-[1.5rem] p-8 sm:p-12 transition-all cursor-pointer flex flex-col items-center justify-center gap-4;
 }
 
 .dropzone-active {
-    @apply border-primary bg-primary/5;
+    @apply border-primary bg-[#e0e5ec] rounded-2xl shadow-[inset_6px_6px_10px_0_rgba(163,177,198,0.7),inset_-6px_-6px_10px_0_rgba(255,255,255,0.8)];
 }
 
 .dropzone-inactive {
-    @apply border-slate-700 hover:border-slate-500;
+    @apply hover:border-primary hover:bg-[#e0e5ec] rounded-2xl shadow-[inset_6px_6px_10px_0_rgba(163,177,198,0.7),inset_-6px_-6px_10px_0_rgba(255,255,255,0.8)];
 }
 
 .icon-container {
-    @apply p-4 bg-slate-800 rounded-2xl text-primary animate-float;
+    @apply bg-[#e0e5ec] rounded-[1.5rem] shadow-[9px_9px_16px_rgba(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] p-5 text-primary animate-float mb-2;
 }
 
 .dropzone-text {
-    @apply text-xl font-semibold text-slate-200;
+    @apply text-lg sm:text-xl font-bold text-[#2d3748] text-center;
 }
 
 .dropzone-subtext {
-    @apply text-slate-500 mt-1;
+    @apply text-[#4a5568] text-sm sm:text-base text-center mt-1;
 }
 
 .file-preview {
-    @apply mt-6 p-4 bg-slate-800/50 rounded-xl border border-slate-700 flex items-center justify-between;
+    @apply mt-6 p-5 bg-[#e0e5ec] rounded-2xl shadow-[inset_6px_6px_10px_0_rgba(163,177,198,0.7),inset_-6px_-6px_10px_0_rgba(255,255,255,0.8)] flex flex-col sm:flex-row items-center justify-between gap-4;
 }
 
 .progress-container {
-    @apply mt-6 space-y-2;
+    @apply mt-6 space-y-3;
 }
 
 .progress-bar-bg {
-    @apply h-2 bg-slate-800 rounded-full overflow-hidden;
+    @apply h-3 bg-[#e0e5ec] rounded-2xl shadow-[inset_6px_6px_10px_0_rgba(163,177,198,0.7),inset_-6px_-6px_10px_0_rgba(255,255,255,0.8)] overflow-hidden;
 }
 
 .progress-bar-fill {
-    @apply h-full bg-primary;
+    @apply h-full bg-primary rounded-full transition-all duration-300;
 }
 
 .upload-btn {
-    @apply w-full mt-6 bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl shadow-lg shadow-indigo-500/30 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed;
-}
-
-.upload-btn:hover svg {
-    @apply scale-110;
+    @apply bg-[#e0e5ec] rounded-2xl transition-all duration-300 shadow-[9px_9px_16px_rgba(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] w-full mt-8 py-4 text-primary font-bold text-lg flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed;
 }
 
 .recent-section {
-    @apply space-y-6;
+    @apply space-y-6 mt-16;
 }
 
 .section-header {
-    @apply flex items-center justify-between;
+    @apply flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4;
 }
 
 .section-title {
-    @apply text-2xl font-bold;
+    @apply text-2xl sm:text-3xl font-bold text-[#2d3748];
 }
 
 .view-all-link {
-    @apply text-primary hover:underline text-sm font-medium;
+    @apply text-primary hover:underline font-semibold;
 }
 
 .empty-state {
-    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-12 rounded-3xl text-center;
+    @apply bg-[#e0e5ec] rounded-[1.5rem] shadow-[9px_9px_16px_rgba(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] p-10 sm:p-12 text-center flex flex-col items-center justify-center gap-4;
 }
 
 .upload-item {
-    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-4 rounded-2xl flex items-center justify-between hover:border-slate-500/50 transition-all;
+    @apply bg-[#e0e5ec] rounded-2xl shadow-[4px_4px_8px_rgba(163,177,198,0.6),-4px_-4px_8px_rgba(255,255,255,0.5)] p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all;
 }
 
-.upload-item:hover .item-icon {
-    @apply bg-primary/20 text-primary;
+.upload-item:hover {
+    @apply bg-[#e0e5ec] rounded-2xl shadow-[inset_6px_6px_10px_0_rgba(163,177,198,0.7),inset_-6px_-6px_10px_0_rgba(255,255,255,0.8)];
 }
 
 .item-icon {
-    @apply p-3 bg-slate-800 rounded-xl transition-colors;
+    @apply bg-[#e0e5ec] rounded-[1.5rem] shadow-[9px_9px_16px_rgba(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] p-3 text-primary shrink-0;
 }
 
 .item-details {
-    @apply flex items-center gap-4;
+    @apply flex items-center gap-4 overflow-hidden w-full;
 }
 
 .item-actions {
-    @apply flex items-center gap-2;
+    @apply flex items-center gap-3 shrink-0 self-end sm:self-auto;
 }
 
 .action-btn {
-    @apply p-2 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-white transition-all;
+    @apply bg-[#e0e5ec] rounded-2xl transition-all duration-300 shadow-[9px_9px_16px_rgba(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] p-3 text-[#4a5568] hover:text-primary shrink-0;
 }

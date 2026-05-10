@@ -142,7 +142,7 @@ const Preview = () => {
                                 )}
                             </div>
                             <div className="modal-footer">
-                                <p className="text-slate-400 text-sm">
+                                <p className="text-[#4a5568] font-semibold text-sm">
                                     Only full ZIP download allowed. Previewing single file.
                                 </p>
                             </div>

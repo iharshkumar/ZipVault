@@ -61,11 +61,11 @@ const Dashboard = () => {
     }, [user.token]);
 
     const barData = {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        labels: stats?.chartData?.labels || ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
         datasets: [
             {
                 label: 'Uploads',
-                data: [12, 19, 3, 5, 2, 3], // Dummy data for visual
+                data: stats?.chartData?.data || [0, 0, 0, 0, 0, 0],
                 backgroundColor: 'rgba(99, 102, 241, 0.5)',
                 borderColor: '#6366f1',
                 borderWidth: 1,

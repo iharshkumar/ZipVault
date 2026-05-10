@@ -212,21 +212,39 @@ const getFilePreview = async (req, res) => {
 // @access  Private
 const getStats = async (req, res) => {
     try {
-        const uploads = await Upload.find({ uploadedBy: req.user._id });
+        const uploads = await Upload.find({ uploadedBy: req.user._id }).sort({ createdAt: -1 });
         const totalUploads = uploads.length;
         const totalSize = uploads.reduce((acc, curr) => acc + curr.size, 0);
         
         // Group by month for chart (last 6 months)
-        const sixMonthsAgo = new Date();
-        sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
-        
-        const recentUploads = uploads.filter(u => u.createdAt >= sixMonthsAgo);
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const chartLabels = [];
+        const chartData = [0, 0, 0, 0, 0, 0];
+
+        for (let i = 5; i >= 0; i--) {
+            const d = new Date();
+            d.setMonth(d.getMonth() - i);
+            chartLabels.push(monthNames[d.getMonth()]);
+        }
+
+        uploads.forEach(upload => {
+            const uploadDate = new Date(upload.createdAt);
+            const now = new Date();
+            const monthDiff = (now.getFullYear() - uploadDate.getFullYear()) * 12 + now.getMonth() - uploadDate.getMonth();
+            if (monthDiff >= 0 && monthDiff < 6) {
+                chartData[5 - monthDiff]++;
+            }
+        });
         
         res.status(200).json({
             totalUploads,
             totalSize,
             recentActivity: uploads.slice(0, 5),
-            lastUpload: uploads[0] || null
+            lastUpload: uploads[0] || null,
+            chartData: {
+                labels: chartLabels,
+                data: chartData
+            }
         });
     } catch (error) {
         console.error(error);

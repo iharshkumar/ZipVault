@@ -143,10 +143,10 @@ const Home = () => {
                                             <FileArchive size={20} />
                                         </div>
                                         <div>
-                                            <p className="text-sm font-medium text-slate-200 truncate max-w-[200px]">
+                                            <p className="text-sm font-bold text-[#2d3748] truncate max-w-[200px]">
                                                 {file.name}
                                             </p>
-                                            <p className="text-xs text-slate-500">
+                                            <p className="text-xs font-semibold text-[#a0aec0]">
                                                 {(file.size / (1024 * 1024)).toFixed(2)} MB
                                             </p>
                                         </div>
@@ -167,7 +167,7 @@ const Home = () => {
 
                         {uploading && (
                             <div className="progress-container">
-                                <div className="flex justify-between text-xs font-medium text-slate-400">
+                                <div className="flex justify-between text-xs font-bold text-[#4a5568]">
                                     <span>Uploading...</span>
                                     <span>{progress}%</span>
                                 </div>
@@ -212,8 +212,8 @@ const Home = () => {
                     <div className="space-y-4">
                         {recentUploads.length === 0 ? (
                             <div className="empty-state">
-                                <FileArchive size={48} className="mx-auto text-slate-700 mb-4" />
-                                <p className="text-slate-500">No uploads yet. Start by dropping a file!</p>
+                                <FileArchive size={48} className="mx-auto text-[#a0aec0] mb-4" />
+                                <p className="text-[#4a5568] font-semibold">No uploads yet. Start by dropping a file!</p>
                             </div>
                         ) : (
                             recentUploads.map((upload, idx) => (
@@ -229,10 +229,10 @@ const Home = () => {
                                             <FileArchive size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-medium text-slate-200 truncate max-w-[150px] md:max-w-[250px]">
+                                            <h3 className="font-bold text-[#2d3748] truncate max-w-[150px] md:max-w-[250px]">
                                                 {upload.filename}
                                             </h3>
-                                            <p className="text-xs text-slate-500">
+                                            <p className="text-xs font-semibold text-[#a0aec0]">
                                                 {new Date(upload.createdAt).toLocaleDateString()} • {(upload.size / (1024 * 1024)).toFixed(2)} MB
                                             </p>
                                         </div>

@@ -1,41 +1,41 @@
 .navbar-container {
-    @apply fixed top-0 left-0 right-0 z-50 px-6 py-4;
+    @apply fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-4;
 }
 
 .navbar-content {
-    @apply max-w-7xl mx-auto bg-dark-card backdrop-blur-md border border-dark-border shadow-xl rounded-2xl px-6 py-3 flex items-center justify-between;
+    @apply max-w-7xl mx-auto bg-[#e0e5ec] rounded-[1.5rem] shadow-[9px_9px_16px_rgba(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] px-4 md:px-6 py-3 flex items-center justify-between;
 }
 
 .logo-link {
-    @apply flex items-center gap-2;
+    @apply flex items-center gap-3;
 }
 
 .logo-link:hover .logo-icon {
-    @apply rotate-12;
+    @apply bg-[#e0e5ec] rounded-2xl shadow-[inset_6px_6px_10px_0_rgba(163,177,198,0.7),inset_-6px_-6px_10px_0_rgba(255,255,255,0.8)] text-primary;
 }
 
 .logo-icon {
-    @apply bg-primary p-2 rounded-lg transition-transform;
+    @apply bg-[#e0e5ec] rounded-2xl transition-all duration-300 shadow-[9px_9px_16px_rgba(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] p-2 text-primary transition-all duration-300;
 }
 
 .logo-text {
-    @apply text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+    @apply text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600;
 }
 
 .nav-links {
-    @apply flex items-center gap-8;
+    @apply hidden md:flex items-center gap-8;
 }
 
 .nav-item {
-    @apply flex items-center gap-2 text-slate-400 hover:text-white transition-colors relative;
+    @apply flex items-center gap-2 text-[#4a5568] hover:text-primary transition-colors relative font-semibold;
 }
 
 .nav-item-label {
-    @apply text-sm font-medium;
+    @apply text-sm;
 }
 
 .nav-active-indicator {
-    @apply absolute -bottom-1 left-0 right-0 h-0.5 bg-primary origin-left;
+    @apply absolute -bottom-2 left-0 right-0 h-[3px] bg-primary rounded-full origin-left;
 }
 
 .user-profile {
@@ -43,17 +43,17 @@
 }
 
 .user-info {
-    @apply hidden md:flex flex-col items-end;
+    @apply hidden lg:flex flex-col items-end;
 }
 
 .username {
-    @apply text-sm font-medium text-slate-200;
+    @apply text-sm font-bold text-[#2d3748];
 }
 
 .user-email {
-    @apply text-xs text-slate-400;
+    @apply text-xs text-[#4a5568] font-medium;
 }
 
 .logout-btn {
-    @apply p-2 rounded-xl bg-slate-800 hover:bg-red-500/20 hover:text-red-400 transition-colors;
+    @apply bg-[#e0e5ec] rounded-2xl transition-all duration-300 shadow-[9px_9px_16px_rgba(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] p-3 text-red-500 hover:text-red-600;
 }
