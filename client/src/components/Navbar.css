@@ -1,0 +1,59 @@
+.navbar-container {
+    @apply fixed top-0 left-0 right-0 z-50 px-6 py-4;
+}
+
+.navbar-content {
+    @apply max-w-7xl mx-auto bg-dark-card backdrop-blur-md border border-dark-border shadow-xl rounded-2xl px-6 py-3 flex items-center justify-between;
+}
+
+.logo-link {
+    @apply flex items-center gap-2;
+}
+
+.logo-link:hover .logo-icon {
+    @apply rotate-12;
+}
+
+.logo-icon {
+    @apply bg-primary p-2 rounded-lg transition-transform;
+}
+
+.logo-text {
+    @apply text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+}
+
+.nav-links {
+    @apply flex items-center gap-8;
+}
+
+.nav-item {
+    @apply flex items-center gap-2 text-slate-400 hover:text-white transition-colors relative;
+}
+
+.nav-item-label {
+    @apply text-sm font-medium;
+}
+
+.nav-active-indicator {
+    @apply absolute -bottom-1 left-0 right-0 h-0.5 bg-primary origin-left;
+}
+
+.user-profile {
+    @apply flex items-center gap-4;
+}
+
+.user-info {
+    @apply hidden md:flex flex-col items-end;
+}
+
+.username {
+    @apply text-sm font-medium text-slate-200;
+}
+
+.user-email {
+    @apply text-xs text-slate-400;
+}
+
+.logout-btn {
+    @apply p-2 rounded-xl bg-slate-800 hover:bg-red-500/20 hover:text-red-400 transition-colors;
+}

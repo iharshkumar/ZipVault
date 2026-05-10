@@ -1,0 +1,95 @@
+.dashboard-container {
+    @apply pt-28 pb-12 px-6 max-w-7xl mx-auto;
+}
+
+.dashboard-header {
+    @apply mb-12;
+}
+
+.dashboard-title {
+    @apply text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+}
+
+.dashboard-subtitle {
+    @apply text-slate-400;
+}
+
+.stats-grid {
+    @apply grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12;
+}
+
+.stat-card {
+    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-6 rounded-3xl;
+}
+
+.stat-icon-box {
+    @apply p-3 bg-slate-800 rounded-2xl w-fit mb-4;
+}
+
+.stat-label {
+    @apply text-slate-400 text-sm font-medium;
+}
+
+.stat-value {
+    @apply text-2xl font-bold my-1;
+}
+
+.stat-sub {
+    @apply text-[10px] text-slate-600 uppercase tracking-widest font-bold;
+}
+
+.dashboard-content {
+    @apply grid lg:grid-cols-3 gap-8;
+}
+
+.chart-section {
+    @apply lg:col-span-2 bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-8 rounded-[2.5rem];
+}
+
+.chart-header {
+    @apply flex items-center justify-between mb-8;
+}
+
+.chart-title {
+    @apply text-xl font-bold flex items-center gap-2;
+}
+
+.chart-container {
+    @apply h-[300px];
+}
+
+.activity-section {
+    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-8 rounded-[2.5rem];
+}
+
+.activity-title {
+    @apply text-xl font-bold flex items-center gap-2 mb-8;
+}
+
+.activity-list {
+    @apply space-y-6;
+}
+
+.activity-item {
+    @apply flex items-center gap-4;
+}
+
+.activity-dot {
+    @apply w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(99,102,241,0.8)];
+}
+
+.activity-details {
+    @apply flex-1 min-w-0;
+}
+
+.activity-filename {
+    @apply text-sm font-medium text-slate-200 truncate;
+}
+
+.activity-date {
+    @apply text-xs text-slate-500;
+}
+
+.activity-empty {
+    @apply text-slate-500 text-center py-12;
+}

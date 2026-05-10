@@ -1,0 +1,83 @@
+.preview-container {
+    @apply pt-28 pb-12 px-6 max-w-7xl mx-auto;
+}
+
+.preview-header {
+    @apply mb-8 flex items-center justify-between;
+}
+
+.header-left {
+    @apply flex items-center gap-4;
+}
+
+.back-btn {
+    @apply p-2 hover:bg-slate-800 rounded-xl transition-all;
+}
+
+.preview-title {
+    @apply text-3xl font-bold truncate max-w-[300px] md:max-w-xl;
+}
+
+.preview-subtitle {
+    @apply text-slate-400 text-sm;
+}
+
+.preview-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4;
+}
+
+.file-card {
+    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-4 rounded-2xl flex flex-col items-center justify-center gap-3 cursor-pointer transition-all;
+}
+
+.file-card:hover .file-icon-box {
+    @apply bg-primary text-white;
+}
+
+.file-card:hover .preview-badge {
+    @apply opacity-100;
+}
+
+.file-card-previewable {
+    @apply hover:border-primary/50 hover:bg-primary/5;
+}
+
+.file-card-static {
+    @apply opacity-60 cursor-default;
+}
+
+.file-icon-box {
+    @apply p-4 bg-slate-800 rounded-xl text-slate-400 transition-all;
+}
+
+.file-name-label {
+    @apply text-xs font-medium text-slate-300 text-center truncate w-full;
+}
+
+.preview-badge {
+    @apply text-[10px] uppercase tracking-wider text-primary font-bold opacity-0 transition-opacity;
+}
+
+.modal-overlay {
+    @apply absolute inset-0 bg-dark-bg/90 backdrop-blur-sm;
+}
+
+.modal-content {
+    @apply relative z-10 max-w-5xl w-full h-full flex flex-col;
+}
+
+.modal-header {
+    @apply flex justify-between items-center mb-4 text-white;
+}
+
+.close-btn {
+    @apply p-2 hover:bg-white/10 rounded-full transition-all;
+}
+
+.media-container {
+    @apply flex-1 bg-dark-card backdrop-blur-md border border-dark-border shadow-xl rounded-3xl overflow-hidden flex items-center justify-center bg-black/40;
+}
+
+.modal-footer {
+    @apply mt-4 text-center;
+}

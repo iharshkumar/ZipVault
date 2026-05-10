@@ -1,0 +1,111 @@
+.logs-container {
+    @apply pt-28 pb-12 px-6 max-w-7xl mx-auto;
+}
+
+.logs-header {
+    @apply mb-12;
+}
+
+.logs-title {
+    @apply text-4xl font-bold mb-4;
+}
+
+.gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+}
+
+.logs-subtitle {
+    @apply text-slate-400;
+}
+
+.filters-bar {
+    @apply flex flex-col md:flex-row gap-4 mb-8;
+}
+
+.search-wrapper {
+    @apply relative flex-1;
+}
+
+.search-icon {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 text-slate-500;
+}
+
+.search-input {
+    @apply w-full bg-slate-900/50 border border-dark-border rounded-xl py-3 pl-10 pr-4 outline-none focus:ring-2 focus:ring-primary transition-all;
+}
+
+.filter-wrapper {
+    @apply relative;
+}
+
+.filter-icon {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 text-slate-500;
+}
+
+.filter-select {
+    @apply bg-slate-900/50 border border-dark-border rounded-xl py-3 pl-10 pr-8 outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer;
+}
+
+.filter-arrow {
+    @apply absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none;
+}
+
+.logs-grid {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.log-card {
+    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-6 rounded-3xl hover:border-slate-500/50 transition-all flex flex-col justify-between;
+}
+
+.log-card:hover .log-icon-container {
+    @apply bg-primary text-white;
+}
+
+.log-card-header {
+    @apply flex items-start justify-between mb-4;
+}
+
+.log-icon-container {
+    @apply p-3 bg-slate-800 rounded-2xl transition-all duration-500;
+}
+
+.log-actions {
+    @apply flex gap-1;
+}
+
+.log-action-btn {
+    @apply p-2 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-white transition-all;
+}
+
+.log-delete-btn {
+    @apply p-2 hover:bg-red-500/20 rounded-lg text-slate-400 hover:text-red-400 transition-all;
+}
+
+.log-card-footer {
+    @apply mt-auto;
+}
+
+.log-filename {
+    @apply text-lg font-bold text-slate-200 truncate mb-1;
+}
+
+.log-meta {
+    @apply flex items-center gap-3 text-xs text-slate-500 font-medium;
+}
+
+.log-size-tag {
+    @apply px-2 py-1 bg-slate-800 rounded-md;
+}
+
+.skeleton-card {
+    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl h-48 rounded-2xl animate-pulse bg-slate-800/50;
+}
+
+.logs-empty-state {
+    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-20 rounded-[2.5rem] text-center;
+}
+
+.empty-icon {
+    @apply mx-auto text-slate-800 mb-6;
+}

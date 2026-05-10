@@ -1,0 +1,119 @@
+.home-container {
+    @apply pt-28 pb-12 px-6 max-w-7xl mx-auto;
+}
+
+.home-grid {
+    @apply grid lg:grid-cols-2 gap-12 items-start;
+}
+
+.hero-section {
+    @apply space-y-8;
+}
+
+.hero-title {
+    @apply text-5xl font-bold mb-4;
+}
+
+.gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+}
+
+.hero-subtitle {
+    @apply text-slate-400 text-lg leading-relaxed;
+}
+
+.upload-card {
+    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-8 rounded-[2rem] relative overflow-hidden;
+}
+
+.dropzone {
+    @apply border-2 border-dashed rounded-2xl p-12 transition-all cursor-pointer flex flex-col items-center justify-center gap-4;
+}
+
+.dropzone-active {
+    @apply border-primary bg-primary/5;
+}
+
+.dropzone-inactive {
+    @apply border-slate-700 hover:border-slate-500;
+}
+
+.icon-container {
+    @apply p-4 bg-slate-800 rounded-2xl text-primary animate-float;
+}
+
+.dropzone-text {
+    @apply text-xl font-semibold text-slate-200;
+}
+
+.dropzone-subtext {
+    @apply text-slate-500 mt-1;
+}
+
+.file-preview {
+    @apply mt-6 p-4 bg-slate-800/50 rounded-xl border border-slate-700 flex items-center justify-between;
+}
+
+.progress-container {
+    @apply mt-6 space-y-2;
+}
+
+.progress-bar-bg {
+    @apply h-2 bg-slate-800 rounded-full overflow-hidden;
+}
+
+.progress-bar-fill {
+    @apply h-full bg-primary;
+}
+
+.upload-btn {
+    @apply w-full mt-6 bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl shadow-lg shadow-indigo-500/30 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.upload-btn:hover svg {
+    @apply scale-110;
+}
+
+.recent-section {
+    @apply space-y-6;
+}
+
+.section-header {
+    @apply flex items-center justify-between;
+}
+
+.section-title {
+    @apply text-2xl font-bold;
+}
+
+.view-all-link {
+    @apply text-primary hover:underline text-sm font-medium;
+}
+
+.empty-state {
+    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-12 rounded-3xl text-center;
+}
+
+.upload-item {
+    @apply bg-dark-card backdrop-blur-md border border-dark-border shadow-xl p-4 rounded-2xl flex items-center justify-between hover:border-slate-500/50 transition-all;
+}
+
+.upload-item:hover .item-icon {
+    @apply bg-primary/20 text-primary;
+}
+
+.item-icon {
+    @apply p-3 bg-slate-800 rounded-xl transition-colors;
+}
+
+.item-details {
+    @apply flex items-center gap-4;
+}
+
+.item-actions {
+    @apply flex items-center gap-2;
+}
+
+.action-btn {
+    @apply p-2 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-white transition-all;
+}
