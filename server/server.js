@@ -22,12 +22,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/upload', require('./routes/uploadRoutes'));
 
-// Serve static assets if in production (optional, for deployment readiness)
-if (process.env.NODE_ENV === 'production') {
+// Serve static assets if in production
+if (process.env.NODE_ENV === 'production' || process.env.RENDER) {
+    console.log('Production mode detected. Serving static files from ../client/dist');
     app.use(express.static(path.join(__dirname, '../client/dist')));
     app.get('/{*splat}', (req, res) =>
         res.sendFile(path.resolve(__dirname, '../client', 'dist', 'index.html'))
     );
+} else {
+    console.log('Development mode detected.');
+    app.get('/', (req, res) => {
+        res.send('API is running (Development Mode)...');
+    });
 }
 
 const PORT = process.env.PORT || 5000;
