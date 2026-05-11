@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { motion } from 'framer-motion';
@@ -8,15 +8,22 @@ import './Auth.css';
 
 const Signup = () => {
     const [loading, setLoading] = useState(false);
-    const { loginWithGoogle } = useAuth();
+    const { loginWithGoogle, user } = useAuth();
     const navigate = useNavigate();
+
+    // Redirect if already logged in
+    useEffect(() => {
+        if (user) {
+            navigate('/', { replace: true });
+        }
+    }, [user, navigate]);
 
     const handleGoogleLogin = async () => {
         setLoading(true);
         try {
             await loginWithGoogle();
             toast.success('Signed in with Google!');
-            navigate('/');
+            navigate('/', { replace: true });
         } catch (error) {
             toast.error(error.message || 'Google sign-in failed');
         } finally {
